@@ -1,0 +1,32 @@
+agent:
+  name: "Cirkelline Agents Sekretær"
+  type: "directory_assistant"
+  description: "Hjælper med Cirkelline Agents projekt"
+
+permissions:
+  - read_files
+  - git_operations
+  - run_scripts
+
+kommandoer:
+  - bibliotekar
+
+shortcuts:
+  - name: "status"
+    command: "git status"
+    description: "Git status"
+
+  - name: "todo"
+    command: "find . -name '*TODO*' -type f"
+    description: "Find TODO filer"
+
+  - name: "intro"
+    command: "cat INTRO/README.md 2>/dev/null || echo 'Ingen INTRO README'"
+    description: "Vis INTRO README"
+
+context:
+  project: "cirkelline-agents"
+  databases: []
+
+  key_paths:
+    - "INTRO/ - Project documentation"

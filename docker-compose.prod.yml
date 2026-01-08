@@ -1,0 +1,46 @@
+# Cirkelline Agents - Production
+# NOTE: This project needs complete production setup (Dockerfile + .env.production)
+version: '3.8'
+
+services:
+  # WebSocket SSH Proxy Server
+  websocket-server:
+    # TODO: Create Dockerfile for server/index.js
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: cirkelline-agents-websocket-prod
+    restart: always
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+    environment:
+      - NODE_ENV=production
+      - PORT=8080
+      - HTTPS_PORT=8443
+      - SSL_CERT_PATH=${SSL_CERT_PATH}
+      - SSL_KEY_PATH=${SSL_KEY_PATH}
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - internal
+
+  # Python Integration Services
+  # TODO: Create service definitions for:
+  # - event_bus.py
+  # - master_orchestrator.py
+  # - unified_query_api.py
+  # - file_watcher.py
+  # - cache_manager.py
+
+networks:
+  internal:
+
+# PRODUCTION SETUP INCOMPLETE:
+# - Missing Dockerfiles for all services
+# - Missing .env.production
+# - Need to define database/redis dependencies
+# - Need to containerize Python services
