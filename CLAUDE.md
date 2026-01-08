@@ -256,6 +256,8 @@ npm run ios      # For iOS (requires Mac)
 | 2026-01-03 | 02:30 | P1-8: Komplet dokumentation med FAKTA (fysisk verificeret) | Claude |
 | 2026-01-03 | 02:30 | Verificeret React Native 0.73.2, 5 services, package.json, App.tsx | Claude |
 | 2026-01-03 | 02:30 | Tilføjet komplet dependency liste, app features, agent types | Claude |
+| 2026-01-09 | 00:50 | P1-8: Updated INTRO/30_TODOS.md with actual task list | Elle |
+| 2026-01-09 | 00:50 | P1-8: Updated INTRO/40_BASELINES.md with actual baseline status | Elle |
 
 ---
 
