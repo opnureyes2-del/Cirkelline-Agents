@@ -1,0 +1,37 @@
+folder_id: P-004-cirkelline-agents
+folder_prefix: P
+folder_number: 4
+folder_name: cirkelline-agents
+client_name: Cirkelline Agents
+client_type: Internal Tool
+industry: Agent Systems
+network: Cirkelline
+project_type: Agent Collection
+project_status: Active
+project_stage: Development
+created_date: '2024-11-25'
+owner: Rasmus
+priority: Medium
+budget_category: Internal
+renewal_date: null
+contract_value: null
+tech_stack:
+- TypeScript
+database: null
+services: []
+cirkelline_id: null
+github_repo: null
+documentation_url: null
+dependencies: []
+dependents: []
+tags:
+- status:active
+- stage:development
+- network:cirkelline
+- priority:medium
+- industry:agent-systems
+- tech:typescript
+metadata_version: '1.0'
+last_updated: '2026-01-01T21:35:42.641210'
+last_updated_by: system
+metrics: null
